@@ -6,7 +6,6 @@ $(document).ready(function () {
   $.get(url, function (data, status) {
     if (status === "success") {
       const items = data;
-      console.log(items);
       for (let item in items) {
         const product = items[item];
         const productName = product.title;
@@ -19,7 +18,7 @@ $(document).ready(function () {
         const productSold = Math.round(Math.random() * 100);
         const productReview = Math.round(Math.random() * 50);
         const productImage = product.image;
-        console.log(product);
+
         // Html to insert
         const html = ` 
         <tr>
