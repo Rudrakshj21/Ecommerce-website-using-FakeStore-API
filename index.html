@@ -28,7 +28,7 @@
       style="width: 200px;"
     >
       <div class="container flex-column align-items-start shadow-sm">
-        <a class="navbar-brand ms-2 mt-2 fs-3 fw-bold" href="#">Conceals.</a>
+        <a class="navbar-brand ms-2 mt-2 fs-3 fw-bold " href="#">Conceals.</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -90,8 +90,8 @@
               <a class="nav-link active" aria-current="page" href="#"
                 >Analytics</a
               >
-              <div class="circle" style="font-size: 10px; margin-left: 30px">
-                <div class="ms-1 mt-1 fw-bold">20</div>
+              <div class="circle analytics fw-bold" style="font-size: 10px;margin-left:30px">
+                <div class="ms-1 mt-1  ">20</div>
               </div>
             </li>
             <!-- Accounting Drop Down -->
@@ -146,7 +146,7 @@
               <a class="nav-link active" aria-current="page" href="#"
                 >Notifications</a
               >
-              <div class="circle ms-1 fw-bold" style="font-size: 10px">
+              <div class="circle ms-1 fw-bold notifications" style="font-size: 10px">
                 <div class="mt-1 ms-1">20</div>
               </div>
             </li>
@@ -154,7 +154,7 @@
             <li class="nav-item d-flex align-items-center" style="margin-top:120px;" >
               <!-- account picture -->
               <img
-                src="/accountprofilepicture.jpg"
+                src="accountprofilepicture.jpg"
                 class="img-fluid"
                 alt=""
                 style="width: 40px; margin-left: -10px;border-radius:50%;"
@@ -186,11 +186,11 @@
     <div class="container" >
         <!-- header section -->
       <div
-        class="row py-3 d-flex align-items-center gap-lg-5 flex-nowrap " 
+        class="row py-3 d-flex align-items-center gap-sm-5 flex-nowrap " 
         style="background-color:white;"
       >
         <!-- search container -->
-        <div class="col d-lg-block d-none">
+        <div class="col d-md-block  hidden">
           <form
             class="d-flex align-items-center position-relative"
             role="search"
@@ -209,40 +209,40 @@
           </form>
         </div>
         <!-- number of items -->
-        <div class="col-1 d-lg-flex align-items-center gap-1 d-none">
+        <div class="col-1 d-md-flex align-items-center gap-1  no-of-items hidden">
           <span>6,540</span>
           <span class="text-secondary">items</span>
         </div>
         <!-- show statistics -->
         <div
-          class="col d-lg-flex gap-2 align-items-center justify-content-center border rounded d-none"
+          class="col d-md-flex gap-2 align-items-center justify-content-center border rounded  hidden "
         >
           <i class="bi bi-toggle-on fs-4"></i>
           <div class="text-nowrap" style="font-size: 11px">Show Statistic</div>
         </div>
         <!-- filter -->
         <div
-          class="col d-lg-flex align-items-center justify-content-center gap-2 border rounded d-none"
+          class="col d-md-flex align-items-center justify-content-center gap-2 border rounded  hidden "
         >
           <i class="bi bi-list-check"></i>
           <div>Filter</div>
         </div>
         <!-- list -->
         <div
-          class="col d-lg-flex align-items-center justify-content-center gap-2 border rounded d-none"
+          class="col d-md-flex align-items-center justify-content-center gap-2 border rounded  hidden "
         >
           <i class="bi bi-hdd-stack"></i>
           <div>List</div>
         </div>
         <!-- export -->
         <div
-          class="col d-lg-flex align-items-center justify-content-center gap-2 border rounded d-none"
+          class="col d-md-flex align-items-center justify-content-center gap-2 border rounded hidden "
         >
           <i class="bi bi-download"></i>
           <div>Export</div>
         </div>
         <!-- add new product -->
-        <div class="col-2   " style="width: 180px; ">
+        <div class="col-sm-2 add-product-container" style="width: 180px; ">
           <div class="btn d-flex" style="background-color: rgb(205, 205, 75)">
             <i class="bi bi-plus"></i>
             <div>New Product</div>
@@ -305,9 +305,9 @@
       <!-- Product list  -->
       <div class="container-fluid product-list-container" style="margin-bottom: 50px;">
         <div class="row">
-          <table class="table table-responsive">
+          <table class="table table-responsive ">
             <!-- Product list header -->
-            <thead>
+            <thead class="shadow-sm"> 
               <tr class="product-list-headers">
                 <!-- Item header -->
                 <th class="text-uppercase">
@@ -315,7 +315,7 @@
                     <span>
                       Item
                     </span>
-                    <img src="/caret icon.png" alt="" style="height: 20 px;width:20px">
+                    <img src="caret icon.png" alt="" style="height: 20 px;width:20px">
                   </div>
                 </th>
                 <!-- Price Header -->
@@ -324,7 +324,7 @@
                     <span>
                       Price
                     </span>
-                    <img src="/caret icon.png" alt="" style="height: 20 px;width:20px">
+                    <img src="caret icon.png" alt="" style="height: 20 px;width:20px">
                   </div>
                 </th>
                 <!-- Stock Header -->
@@ -333,7 +333,7 @@
                     <span>
                       Stock
                     </span>
-                    <img src="/caret icon.png" alt="" style="height: 20 px;width:20px">
+                    <img src="caret icon.png" alt="" style="height: 20 px;width:20px">
                   </div>
                 </th>
                 <!-- Volume Header -->
@@ -342,7 +342,7 @@
                     <span>
                       volume
                     </span>
-                    <img src="/caret icon.png" alt="" style="height: 20 px;width:20px">
+                    <img src="caret icon.png" alt="" style="height: 20 px;width:20px">
                   </div>
                 </th>
                 <!-- Type Header -->
@@ -351,7 +351,7 @@
                     <span>
                       Type
                     </span>
-                    <img src="/caret icon.png" alt="" style="height: 20 px;width:20px">
+                    <img src="caret icon.png" alt="" style="height: 20 px;width:20px">
                   </div>
                 </th>
                 <!-- Rating Header -->
@@ -360,14 +360,14 @@
                     <span>
                       Rating
                     </span>
-                    <img src="/caret icon.png" alt="" style="height: 20 px;width:20px">
+                    <img src="caret icon.png" alt="" style="height: 20 px;width:20px">
                   </div>
                 </th>
                 
               </tr>
             </thead>
             <!-- Product details container -->
-            <tbody class="product-details-container">
+            <tbody class="product-details-container" >
             
             </tbody>
           </table>

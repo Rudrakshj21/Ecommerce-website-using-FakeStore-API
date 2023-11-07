@@ -10,30 +10,49 @@ input {
   height: 20px;
   background-color: antiquewhite;
   border-radius: 50%;
+  padding: 4px;
 }
 
 .product-list-headers {
   font-size: 20px;
 }
 
-.itemName,
-.itemsLeft,
-.itemsSold,
+.item-name,
+.items-left,
+.items-sold,
 .rating,
 .volume,
 .reviews,
 .type {
   text-wrap: nowrap;
 }
+
+.hidden {
+  visibility: visible;
+}
+
 @media (max-width: 600px) {
   .itemName {
     font-size: 25px;
-    text-wrap: nowrap;
   }
   .page-info {
     margin-left: 100px;
     text-wrap: nowrap;
     margin-bottom: 10px;
+  }
+  /* hiding header elements */
+  .hidden {
+    visibility: hidden;
+  }
+
+  /* moving product container  */
+  .add-product-container {
+    margin-left: 50%;
+  }
+}
+@media (max-width: 300px) {
+  .add-product-container {
+    margin-left: -50%;
   }
 }
 

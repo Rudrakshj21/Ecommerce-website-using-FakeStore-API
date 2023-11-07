@@ -1,26 +1,22 @@
 "use strict";
-const url = `https://fakestoreapi.com/products`;
 
-$(document).ready(function () {
-  // API Call
-  $.get(url, function (data, status) {
-    if (status === "success") {
-      const items = data;
-      for (let item in items) {
-        const product = items[item];
-        const productName = product.title;
-        const productDescription = product.description;
-        const productPrice = product.price;
-        const productRating = product.rating.rate;
-        const productVolume = product.rating.count;
-        const productType = product.category;
-        const productLeft = Math.round(Math.random() * 300);
-        const productSold = Math.round(Math.random() * 100);
-        const productReview = Math.round(Math.random() * 50);
-        const productImage = product.image;
+// adds products to the page
+function renderProducts(items) {
+  for (let item in items) {
+    const product = items[item];
+    const productName = product.title;
+    const productDescription = product.description;
+    const productPrice = product.price;
+    const productRating = product.rating.rate;
+    const productVolume = product.rating.count;
+    const productType = product.category;
+    const productLeft = Math.round(Math.random() * 300);
+    const productSold = Math.round(Math.random() * 100);
+    const productReview = Math.round(Math.random() * 50);
+    const productImage = product.image;
 
-        // Html to insert
-        const html = ` 
+    // Html to insert
+    const html = ` 
         <tr>
         <!-- Product description -->
             <td>
@@ -32,7 +28,7 @@ $(document).ready(function () {
         
                 <div >
                  <!-- Product name -->
-                    <div class="itemName fw-bold">${productName}</div>
+                    <div class="item-name fw-bold">${productName}</div>
         
                  <!-- Product description -->
                     <div class="itemDescription text-muted">${productDescription}</div>
@@ -52,7 +48,7 @@ $(document).ready(function () {
         <!-- Product  Stock-->
             <td>
                 <!-- Items Remaining -->
-                <div class="itemsLeft" style="font-size:10px">
+                <div class="items-left" style="font-size:14px">
         
                     <span class="fw-bold me-1" >
                         ${productLeft} item
@@ -66,19 +62,19 @@ $(document).ready(function () {
         
                 <!-- Items Sold -->
         
-                <div class="itemsSold" style="margin-top:-10px;font-size:10px;">
+                <div class="items-sold" style="margin-top:-10px;font-size:14px;">
                 ${productSold} Sold
                 </div>
             </td>
         
         <!-- Volume -->
             <td class="volume">
-                <span style="font-size:12px;">${productVolume} quantity</span>
+                <span style="font-size:20px;">${productVolume} quantity</span>
             </td>
         
             <!-- Type -->
             <td class="type" >
-                <span style="font-size:12px;">
+                <span style="font-size:20px;">
                     ${productType}
                 </span>
             </td>
@@ -106,8 +102,25 @@ $(document).ready(function () {
             </td>
         </tr>
         <!-- Single product row end -->`;
-        $(html).insertAfter(".product-details-container");
-      }
+    $(html).insertAfter(".product-details-container");
+  }
+}
+
+function setNotifications() {
+  const randomNum1 = Math.round(Math.random() * 20);
+  const randomNum2 = Math.round(Math.random() * 20);
+  $(".notifications").text(randomNum1);
+  $(".analytics").text(randomNum2);
+}
+
+const url = `https://fakestoreapi.com/products`;
+
+$(document).ready(function () {
+  // API Call when document is loaded
+  $.get(url, function (data, status) {
+    if (status === "success") {
+      renderProducts(data);
+      setNotifications();
     }
   });
 });
